@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace ="userMapper">
+	<insert id="insertUser"
+				parameterType="user">
+		INSERT
+		  INTO
+		 		TB_USER
+		 		(
+		 		USER_NO
+		 	 ,	USER_ID
+		 	 ,	USER_PWD
+		 	 ,	EMAIL
+		 	 ,	NICKNAME
+		 		)
+		VALUES
+				(
+				SEQ_TB_USER.NEXTVAL
+			 ,	#{userId}
+			 ,	#{userPwd}
+			 ,	#{email}
+			 ,	#{nickName}
+				)			
+	</insert>
+	
+
+
+
+</mapper>
