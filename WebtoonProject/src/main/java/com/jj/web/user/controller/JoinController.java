@@ -29,11 +29,12 @@ public class JoinController extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		
 		String userId =request.getParameter("userId");
-		String password = request.getParameter("password");
+		String userPwd = request.getParameter("userPwd");
+		String userName = request.getParameter("userName");
 		String email = request.getParameter("email");
 		String nickName = request.getParameter("nickName");
 		
-		int result = new UserService().insertUser(new UserDto(userId, email, password, nickName));
+		int result = new UserService().insertUser(new UserDto(userId, userPwd, userName, email, nickName));
 		
 		if(result > 0) {
 			response.sendRedirect("/toon");

@@ -12,6 +12,7 @@
 		 		USER_NO
 		 	 ,	USER_ID
 		 	 ,	USER_PWD
+		 	 ,	USER_NAME
 		 	 ,	EMAIL
 		 	 ,	NICKNAME
 		 		)
@@ -20,10 +21,32 @@
 				SEQ_TB_USER.NEXTVAL
 			 ,	#{userId}
 			 ,	#{userPwd}
+			 ,	#{userName}
 			 ,	#{email}
 			 ,	#{nickName}
 				)			
 	</insert>
+	
+	<select id="login" resultType="user">
+		SELECT
+				USER_NO
+			 ,	USER_ID
+			 ,	USER_PWD
+			 ,	USER_NAME
+			 ,	EMAIL
+			 ,	NICKNAME
+			 ,	ENROLL_DATE
+			 ,	MODIFY_DATE
+			 ,	STATUS
+		  FROM
+		  		TB_USER
+		 WHERE
+		 		USER_ID = #{userId}
+		   AND
+		   		USER_PWD = #{userPwd}
+		   AND
+		   		STATUS = 'N'
+	</select>
 	
 
 

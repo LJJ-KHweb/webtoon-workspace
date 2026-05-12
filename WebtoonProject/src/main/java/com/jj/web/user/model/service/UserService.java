@@ -23,6 +23,16 @@ public class UserService {
 		
 		return result;
 	}
+
+	public UserDto login(UserDto user) {
+		SqlSession sqlSession = Template.getSqlSession();
+		
+		UserDto loginUser = ud.login(sqlSession, user);
+		
+		sqlSession.close();
+		
+		return loginUser;
+	}
 	
 	
 

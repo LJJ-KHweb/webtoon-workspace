@@ -108,7 +108,7 @@
 
             <div class="input-group">
                 <label for="userPwd">비밀번호</label>
-                <input type="password" id="userPwd" name="password" placeholder="비밀번호 입력" required>
+                <input type="password" id="userPwd" name="userPwd" placeholder="비밀번호 입력" required>
             </div>
 
             <button type="submit" class="login-btn">로그인</button>
@@ -116,7 +116,7 @@
         </form>
 
         <div class="bottom-menu">
-            <a href="enroll.jsp">회원가입</a>
+            <a href="http://localhost:8088/toon/enroll.do">회원가입</a>
             <a href="#">아이디 찾기</a>
             <a href="#">비밀번호 찾기</a>
         </div>

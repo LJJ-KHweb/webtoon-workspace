@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <header>
 
@@ -36,7 +37,8 @@
 
                         </a>
                     </li>
-					
+					<c:choose>
+						<c:when test="${ empty loginUser }">
                     <li class="nav-item">
                         <a class="nav-link"
                            href="http://localhost:8088/toon/enroll.do">
@@ -45,7 +47,7 @@
 
                         </a>
                     </li>
-
+				
                     <li class="nav-item">
                         <a class="nav-link"
                            href="http://localhost:8088/toon/loginPage.do">
@@ -54,9 +56,10 @@
 
                         </a>
                     </li>
-
+					</c:when>
+					<c:otherwise>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="http://localhost:8088/toon/user-profil.do">
 
                             내 정보
 
@@ -70,8 +73,8 @@
 
                         </a>
                     </li>
-
-
+				</c:otherwise>
+				</c:choose>
 				
                 </ul>
 

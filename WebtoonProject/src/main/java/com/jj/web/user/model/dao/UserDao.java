@@ -10,4 +10,8 @@ public class UserDao {
 		return sqlSession.insert("userMapper.insertUser",userDto);
 	}
 
+	public UserDto login(SqlSession sqlSession, UserDto user) {
+		return sqlSession.selectOne("userMapper.login", user);
+	}
+
 }

@@ -204,8 +204,19 @@
                     비밀번호
                 </label>
 
-                <input type="password" name="password"
+                <input type="text" name="userPwd"
                        placeholder="비밀번호 입력">
+
+            </div>
+            
+            <div class="input-area">
+
+                <label>
+                    이름
+                </label>
+
+                <input type="text" name="userName"
+                       placeholder="이름 입력">
 
             </div>
 
@@ -215,7 +226,7 @@
                     이메일
                 </label>
 
-                <input type="email" name="email"
+                <input type="text" name="email"
                        placeholder="이메일 입력">
 
             </div>

@@ -7,6 +7,7 @@ public class UserDto {
 	private Long userNo;
 	private String userId;
 	private String userPwd;
+	private String userName;
 	private String email;
 	private String nickName;
 	private Date enrollDate;
@@ -15,19 +16,21 @@ public class UserDto {
 	public UserDto() {
 		super();
 	}
-	public UserDto(String userId, String userPwd, String email, String nickName) {
+	public UserDto(String userId, String userPwd, String userName, String email, String nickName) {
 		super();
 		this.userId = userId;
 		this.userPwd = userPwd;
+		this.userName = userName;
 		this.email = email;
 		this.nickName = nickName;
 	}
-	public UserDto(Long userNo, String userId, String userPwd, String email, String nickName, Date enrollDate,
-			Date modifyDate, String status) {
+	public UserDto(Long userNo, String userId, String userPwd, String userName, String email, String nickName,
+			Date enrollDate, Date modifyDate, String status) {
 		super();
 		this.userNo = userNo;
 		this.userId = userId;
 		this.userPwd = userPwd;
+		this.userName = userName;
 		this.email = email;
 		this.nickName = nickName;
 		this.enrollDate = enrollDate;
@@ -51,6 +54,12 @@ public class UserDto {
 	}
 	public void setUserPwd(String userPwd) {
 		this.userPwd = userPwd;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 	public String getEmail() {
 		return email;
@@ -84,13 +93,12 @@ public class UserDto {
 	}
 	@Override
 	public String toString() {
-		return "UserDto [email=" + email + ", enrollDate=" + enrollDate + ", modifyDate=" + modifyDate + ", nickName="
-				+ nickName + ", status=" + status + ", userId=" + userId + ", userNo=" + userNo + ", userPwd=" + userPwd
-				+ "]";
+		return "UserDto [userNo=" + userNo + ", userId=" + userId + ", userPwd=" + userPwd + ", userName=" + userName
+				+ ", email=" + email + ", nickName=" + nickName + ", enrollDate=" + enrollDate + ", modifyDate="
+				+ modifyDate + ", status=" + status + "]";
 	}
 	
-	
-	
+
 	
 
 }
