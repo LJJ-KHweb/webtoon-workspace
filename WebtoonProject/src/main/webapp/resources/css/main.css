@@ -1,91 +1,158 @@
 /* 배너 */
 
-#banner{
-    width: 100%;
-    height: 500px;
 
-    background-image:
-    linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    );
+.banner{
+		width: 100%;
+		height: 350px;
 
-    background-size: cover;
-    background-position: center;
+		background-image:
+		linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+		url('images/background.png');
+		
+		background-size: cover;
+		background-position: center;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-    color: white;
-    text-align: center;
-}
+		text-align: center;
+	}
 
-#banner h1{
-    font-size: 60px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
+	.overlay h1{
+		font-size: 70px;
+		color: white;
+		font-weight: 900;
+		margin-bottom: 20px;
+	}
 
-#banner p{
-    font-size: 24px;
-}
+	.overlay p{
+		font-size: 28px;
+		color: white;
+		font-weight: 500;
+	}
 
-/* 메인 */
 
-main{
-    width: 1200px;
-    margin: auto;
-    padding: 80px 0;
-}
+	/* ================= SECTION ================= */
 
-.platform-title{
-    text-align: center;
-    margin-bottom: 50px;
+	.webtoon-section{
+		width: 1200px;
+		margin: 80px auto;
+	}
 
-    font-size: 40px;
-    font-weight: bold;
-}
+	.webtoon-section h2{
+		text-align: center;
+		font-size: 55px;
+		margin-bottom: 40px;
+	}
 
-.card-area{
-    display: flex;
-    gap: 30px;
-}
 
-.webtoon-card{
-    flex: 1;
+	/* ================= DAYS ================= */
 
-    border: none;
-    border-radius: 20px;
+	.days{
+		display: flex;
+		justify-content: center;
+		gap: 20px;
 
-    overflow: hidden;
+		margin-bottom: 50px;
+	}
 
-    transition: 0.3s;
+	.day{
+		width: 70px;
+		height: 70px;
 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
+		border-radius: 50%;
+		border: 2px solid #ddd;
 
-.webtoon-card:hover{
-    transform: translateY(-10px);
-}
+		background-color: white;
 
-.webtoon-card img{
-    height: 350px;
-    object-fit: cover;
-}
+		font-size: 25px;
+		font-weight: 700;
 
-.card-body{
-    text-align: center;
-    padding: 30px;
-}
+		cursor: pointer;
 
-.card-title{
-    font-size: 28px;
-    font-weight: bold;
-}
+		transition: 0.3s;
+	}
 
-.card-text{
-    margin: 20px 0;
-    color: gray;
-}
+	.day:hover{
+		background-color: #20c997;
+		color: white;
+		border: none;
+	}
+
+	.day.active{
+		background-color: #20c997;
+		color: white;
+		border: none;
+	}
+
+
+	/* ================= TOON CARD ================= */
+
+	.toon-list{
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	.toon-card{
+		width: 100%;
+		height: 220px;
+
+		background-color: white;
+
+		border-radius: 20px;
+
+		display: flex;
+		align-items: center;
+
+		padding: 25px;
+
+		box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+
+		transition: 0.3s;
+	}
+
+	.toon-card:hover{
+		transform: translateY(-5px);
+	}
+
+	.toon-img{
+		width: 280px;
+		height: 170px;
+
+		border-radius: 15px;
+		overflow: hidden;
+
+		flex-shrink: 0;
+	}
+
+	.toon-img img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.toon-info{
+		margin-left: 35px;
+	}
+
+	.toon-info h3{
+		font-size: 50px;
+		margin-bottom: 15px;
+	}
+
+	.toon-info p{
+		font-size: 28px;
+		color: #666;
+
+		margin-bottom: 15px;
+	}
+
+	.toon-info span{
+		font-size: 30px;
+		font-weight: 800;
+		color: #20c997;
+	}
+
+
