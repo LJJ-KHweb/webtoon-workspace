@@ -33,6 +33,15 @@ public class UserService {
 		
 		return loginUser;
 	}
+
+	public int logOut(UserDto user) {
+		SqlSession sqlSession = Template.getSqlSession();
+		
+		int result = ud.logOut(sqlSession, user);
+		
+		sqlSession.close();
+		return result;
+	}
 	
 	
 

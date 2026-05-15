@@ -14,4 +14,9 @@ public class UserDao {
 		return sqlSession.selectOne("userMapper.login", user);
 	}
 
+	public int logOut(SqlSession sqlSession, UserDto user) {
+		
+		return sqlSession.selectOne("userMapper.logout", user);
+	}
+
 }

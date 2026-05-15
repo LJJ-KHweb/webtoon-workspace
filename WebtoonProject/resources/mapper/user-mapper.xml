@@ -48,6 +48,19 @@
 		   		STATUS = 'N'
 	</select>
 	
+	<select id="logout" resultType="_int">
+		SELECT
+				COUNT(*)
+		  FROM
+		  		TB_USER
+		 WHERE
+		 		USER_ID = #{userId}
+		   AND
+		   		USER_PWD = #{userPwd}
+		   AND 
+		   		STATUS = 'N'
+	</select>
+	
 
 
 

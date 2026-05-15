@@ -21,7 +21,7 @@
 					<li class="nav-item"><a class="nav-link"
 						href="http://localhost:8088/toon/user-profil.do"> 내 정보 </a></li>
 
-					<li class="nav-item"><a class="nav-link" href="#"> 로그아웃 </a></li>
+					<li class="nav-item"><a class="nav-link" href="http://localhost:8088/toon/logout.do"> 로그아웃 </a></li>
 				</c:otherwise>
 			</c:choose>
 		</ul>
